@@ -7,12 +7,11 @@ playerSocket = net.createServer()
 class Player
     constructor: () ->
         @utils = new Utils
-        @epsilon = @utils.epsilon
+        @epsilon = @utils.EPSILON
         @N = @utils.N
         @HOST = @utils.HOST
         @PLAYER_PORT = @utils.PLAYER_PORT
         @time_left_in_seconds = 120
-        console.log(@time_left_in_seconds)
 
     checkIfSumToCorrectValues: (numbers) ->
         totalPositiveValue = 0

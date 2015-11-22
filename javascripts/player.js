@@ -13,12 +13,11 @@
   Player = (function() {
     function Player() {
       this.utils = new Utils;
-      this.epsilon = this.utils.epsilon;
+      this.epsilon = this.utils.EPSILON;
       this.N = this.utils.N;
       this.HOST = this.utils.HOST;
       this.PLAYER_PORT = this.utils.PLAYER_PORT;
       this.time_left_in_seconds = 120;
-      console.log(this.time_left_in_seconds);
     }
 
     Player.prototype.checkIfSumToCorrectValues = function(numbers) {

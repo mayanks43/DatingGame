@@ -3,7 +3,7 @@
   var Utils;
 
   Utils = (function() {
-    Utils.prototype.N = 50;
+    Utils.prototype.N = 20;
 
     Utils.prototype.HOST = '127.0.0.1';
 
@@ -11,7 +11,7 @@
 
     Utils.prototype.PLAYER_PORT = 6969;
 
-    Utils.prototype.epsilon = 0.000001;
+    Utils.prototype.EPSILON = 0.000001;
 
     function Utils() {}
 
@@ -32,7 +32,7 @@
       numberString = numberString.toString();
       numberArray = [];
       if (numberString) {
-        stringArray = numberString.split(" ");
+        stringArray = numberString.trim().split(" ");
         size = stringArray.length;
         if (decimalPoints === 0) {
           for (index = i = 0, ref = size - 1; 0 <= ref ? i <= ref : i >= ref; index = 0 <= ref ? ++i : --i) {

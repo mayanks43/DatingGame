@@ -1,9 +1,9 @@
 class Utils
-    N: 50
+    N: 20
     HOST: '127.0.0.1'
     MATCHMAKER_PORT: 9696
     PLAYER_PORT: 6969
-    epsilon: 0.000001
+    EPSILON: 0.000001
 
     constructor: () ->
 
@@ -18,7 +18,7 @@ class Utils
         numberString = numberString.toString()
         numberArray = []
         if numberString
-            stringArray = numberString.split(" ")
+            stringArray = numberString.trim().split(" ")
             size = stringArray.length
             if decimalPoints is 0
                 for index in [0..size-1]

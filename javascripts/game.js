@@ -18,7 +18,7 @@
       this.PisConnected = false;
       this.waitingForMMCandidate = false;
       this.waitingForPCandidate = true;
-      this.epsilon = this.utils.epsilon;
+      this.epsilon = this.utils.EPSILON;
       this.turn = 0;
       this.maxScore = -100;
       this.setup();
@@ -110,6 +110,7 @@
       } else {
         score = this.scoreVector(this.currentMMCandidate, this.currentPCandidate);
         this.updateMaxValues(score);
+        this.updateGUI(this.currentMMCandidate, this.currentPCandidate, score);
         if (Math.abs(score - 1) < this.epsilon || this.turn === 20 || this.matchMaker.timed_out() || this.player.timed_out()) {
           return this.endGame();
         } else {
@@ -185,6 +186,11 @@
         numberArray.push(Math.random().toFixed(4));
       }
       return numberArray;
+    };
+
+    Game.prototype.updateGUI = function(mmCandidate, pCandidate, score) {
+      var data;
+      return data = [];
     };
 
     return Game;
