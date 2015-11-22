@@ -1,7 +1,8 @@
 Player = require "./player"
 MatchMaker = require "./matchmaker"
 Utils = require "./utils"
-
+seedrandom = require('seedrandom');
+seedrandom('zanpakuto', { global: true });
 class Game
     constructor: ->
         @utils = new Utils
